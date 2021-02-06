@@ -1,0 +1,35 @@
+<%- include("partials/head") -%>
+<body>
+  <div class="container">
+    <%- include("partials/header") -%>
+
+    <h1 class="clearfix">Login</h1>
+
+    <p class="error"></p>
+
+    <form action="/login" method="POST">
+      <p>
+        <label>Email</label>
+        <input type="email" name="email" />
+      </p>
+
+      <label>Password</label>
+      <input type="password" name="password" />
+
+      <p>
+        <input type="submit" value="Login"/>
+      </p>
+    </form>
+  </div>
+
+  <script src="javascripts/application.js"></script>
+
+  <script>
+    if($.cookie("Error")) {
+      $(".error").html($.cookie("Error"));
+
+      $.removeCookie("Error");
+    }
+  </script>
+</body>
+<%- include("partials/footer") -%>

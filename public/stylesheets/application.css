@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+header img {
+  float: left;
+  max-width: 200px;
+}
+
+header nav {
+  float: right;
+}
+
+header ul li {
+  display: inline;
+  padding: 0 10px;
+  list-style-type: none;
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.clearfix { clear: both; }
