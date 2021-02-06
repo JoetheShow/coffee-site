@@ -2,24 +2,24 @@
 <body>
   <div class="container">
     <%- include("partials/header") -%>
+    <div class="user-form-container clearfix">
+      <h1>Login</h1>
 
-    <h1 class="clearfix">Login</h1>
+      <p class="error"></p>
 
-    <p class="error"></p>
+      <form action="/login" method="POST">
+        <p>
+          <input type="email" name="email" placeholder="Email" />
+        </p>
 
-    <form action="/login" method="POST">
-      <p>
-        <label>Email</label>
-        <input type="email" name="email" />
-      </p>
-
-      <label>Password</label>
-      <input type="password" name="password" />
-
-      <p>
-        <input type="submit" value="Login"/>
-      </p>
-    </form>
+        <input type="password" name="password" placeholder="Password"/>
+        <div class="form-buttons">
+            <input type="submit" value="Login"/>
+            <input type="submit" value="Signup"/>
+        </div>
+      </form>
+    </div>
+    
   </div>
 
   <script src="javascripts/application.js"></script>

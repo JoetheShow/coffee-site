@@ -29,3 +29,13 @@ header a {
 }
 
 .clearfix { clear: both; }
+
+.user-form-container{
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-buttons {
+  padding: 5px;
+}

@@ -1,0 +1,30 @@
+<%- include("partials/head") -%>
+<body>
+  <div class="container">
+    <%- include("partials/header") -%>
+    <div class="user-form-container clearfix">
+      <h1>Signup</h1>
+
+      <p class="error"></p>
+
+      <form action="/signup" method="POST">
+        <p>
+          <input type="name" name="name" placeholder="Name" />
+        </p>
+        <p>
+          <input type="email" name="email" placeholder="Email"/>
+        </p>
+
+        <input type="password" name="password" placeholder="Password"/>
+
+        <p>
+          <input type="submit" value="Signup"/>
+        </p>
+      </form>
+    </div>
+    
+  </div>
+
+  <script src="javascripts/application.js"></script>
+</body>
+<%- include("partials/footer") -%>
