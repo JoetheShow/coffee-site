@@ -1,15 +1,51 @@
+:root {
+  --primary-blue: rgb(34, 41, 58);
+  --secondary-blue: rgb(52, 60, 78);
+  --primary-aqua: rgb(16, 133, 133);
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2 , h3 {
+  color:var(--primary-blue);
+}
+
+.text-white {
+  color: white;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix { clear: both; }
+
+.invert{
+  -webkit-filter: invert(100%);
 }
 
 .container {
-  width: 70%;
+  width: 80%;
+  max-width: 1600px;
   margin: 0 auto;
+  min-width: 300px;
 }
 
-header img {
+/* top section */
+
+.logo {
+  padding-top: 2px;
   float: left;
+  margin: auto auto;
   max-width: 200px;
 }
 
@@ -21,14 +57,291 @@ header ul li {
   display: inline;
   padding: 0 10px;
   list-style-type: none;
+  font-size: 1rem;
 }
 
 header a {
   text-decoration: none;
   text-transform: uppercase;
+  color: gray;
+  font-weight: 400;
 }
 
-.clearfix { clear: both; }
+header a:hover {
+  color: black;
+  font-weight: 400;
+}
+
+.footer-nav-links a {
+  color: gray;
+  font-weight: 400;
+}
+
+.footer-nav-links a:hover {
+  color: #fff;
+  font-weight: 400;
+}
+
+.top-image-container {
+  background-image: url('/images/top-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.top-image-container-about-us {
+  background-image: url('/images/coffee2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.top-overlay-content {
+  padding: 3em 50% 0 4em;
+}
+
+.about-us-overlay-content {
+  padding: 1em 50% 2em 4em;
+}
+
+.top-overlay-content h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.top-overlay-content p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: white;
+}
+
+#image-overlay-button {
+  padding: 1.1em 1.1em;
+  border-radius: 10px;
+  margin-top: 2em;
+  border: none;
+  color: #fff;
+  background: var(--primary-aqua);
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-bottom: 3em;
+}
+
+/* product collection display section */
+
+.collection-heading {
+  color: gray;
+  font-size: 3rem;
+}
+
+.product-collection {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product {
+  margin-bottom: 4em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+.product p {
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 215px;
+}
+
+.product img {
+  max-width: 230px;
+}
+
+/* reasons to choose us section */
+.choose-us-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top-reason {
+  background-color: var(--secondary-blue);
+  border-radius: 10px 10px 0 0;
+  color: white;
+  font-size: 1.2rem;
+  padding: 2em 2em 1em 2em;
+}
+
+.background-piece {
+  background-color: var(--secondary-blue);
+  min-height: 700px;
+  border-radius: 0 0 10px 10px;
+}
+
+.reason-cards {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -40em;
+  margin-bottom: 10em;
+}
+
+.card {
+  padding: 2em;
+  color: white;
+  margin-bottom: 3em;
+  border-radius: 10px;
+  background-color: var(--primary-aqua);
+  font-size: 1.2rem;
+}
+
+/* stages container section */
+.heading-stages {
+  color: gray;
+}
+
+.stages-container {
+  display: flex;
+  width: 67%;
+  position: relative;
+  justify-content: space-between;
+  margin-left: 3em;
+}
+
+.stages-container::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(207, 193, 162);
+  transform: translateY(-50%);
+}
+
+.circle {
+  display: inline-block;
+  background-color:#fff;
+  border: 2px solid var(--primary-aqua);    
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.stages-content-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.number {
+  font-size: 3rem;
+  color: rgb(207, 193, 162);
+}
+
+.stages-content p {
+  color: grey;
+}
+
+/* about us page section */
+.about-us-first-section {
+  width: 94%;
+  margin: 6em auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-us-first-section img {
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.our-commitment-about-us p{
+  color: gray;
+  line-height: 1.4;
+}
+
+.quality-container img {
+  display: block;
+  border-radius: 10px;
+  width: 85%;
+  max-width: 450px;
+  margin: 0 auto -10em auto;
+  max-height: 300px;
+}
+
+.quality-statement {
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  background: var(--secondary-blue);
+  padding: 13em 0 3em 0;
+}
+
+.quality-statement p {
+  padding: 0 3rem;
+  line-height: 1.4;
+}
+
+/* footer section */
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 9em;
+  background: var(--secondary-blue);
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  margin: .5em;
+}
+
+.footer-logo {
+  width: 12em;
+  margin: 2em auto;
+}
+
+.footer-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+}
+
+.footer-nav-links ul li {
+  padding: 0 0 2em 0;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links ul{
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  list-style: none;
+  text-align: center;
+}
+
+.social-links img {
+  height: 32px;
+  width: 32px;
+}
+
+/* login and signup forms */
 
 .user-form-container{
   width: 300px;
@@ -38,4 +351,209 @@ header a {
 
 .form-buttons {
   padding: 5px;
+}
+
+.login-signup-button a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+/* media queries */
+
+/* about us first section above 720px */
+@media (min-width: 720px) {
+  .about-us-first-section {
+    flex-direction: row;
+  }
+
+  .about-us-first-section img {
+    max-height: 400px;
+  }
+
+  .our-commitment-about-us{
+    text-align: left;
+    margin-left: 3em;
+  }
+  
+  .our-commitment-about-us p{
+    margin: 0 4em 0 0;
+    text-align: left;
+  }
+
+  .our-commitment-about-us h1 {
+    margin: 0 0 1em 0;
+  }
+}
+
+/* about us quality section above 1040px */
+@media (min-width: 1040px) {
+  .quality-statement {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2em 0 3em 0;
+  }
+
+  .quality-statement h1 {
+    width: 40%;
+    padding: 0 3rem;
+  }
+  
+  .quality-statement p {
+    width: 40%;
+    padding-bottom: 3em;
+  }
+
+  .quality-container img {
+    max-width: 350px;
+    max-height: 400px;
+    margin: 0 3em -18em auto;
+  }
+}
+
+/* for reason-cards above 600px */
+@media (min-width: 600px) {
+  .background-piece {
+    min-height: 550px;
+  }
+
+  .top-reason {
+    font-size: 1.3rem;
+    padding: 2em 6em 1em 6em;
+  }
+
+  .reason-cards {
+    margin-top: -31em;
+  }
+
+  .card p {
+    padding: 0px 4em 0 4em;
+  }
+}
+
+/* for reason-cards above 1200px */
+@media (min-width: 1200px) {
+  .choose-us-section {
+    width: 100%;
+  }
+  
+  .reason-cards {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 1em;
+    margin: 1em;
+  }
+
+  .card p {
+    padding: 0;
+  }
+
+  .top-reason p {
+    padding: 0 8em;
+    line-height: 1.4;
+  }
+
+  .background-piece {
+    min-height: 200px;
+  }
+
+  .reason-cards {
+    margin-top: -11em;
+  }
+}
+
+/* for the products section of home page */
+@media (max-width: 1200px) {
+  .product-collection {
+    flex-direction: column;
+  }
+
+  .product {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .product-description {
+    display: inline;
+    width: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .product {
+    display: block;
+  }
+}
+
+/* resize container when screen is below 870px */
+@media (max-width: 870px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* hide stages-container below 750px */
+@media (max-width: 749px) {
+  .stages-container {
+    display: none;
+  }
+}
+/* show stages container and display column above 750px */
+@media (min-width: 750px) {
+  .stages-content-container {
+    flex-direction: row;
+    text-align: start;
+  }
+
+  .stages-content {
+    margin: 1em;
+  }
+}
+
+/* still need to change nav elements to hamburger bar */
+/* darken the top image and center the overlay content */
+@media (max-width: 750px) {
+  .top-overlay-content {
+    padding: 2em 2em;
+    text-align: center;
+    background: rgba(0,0,0, 0.6);
+  }
+}
+
+/* footer section above 1275px */
+@media (min-width: 1275px) {
+  footer {
+    flex-direction: row;
+    padding: 1em 0;
+  }
+
+  .footer-logo {
+    height: 40px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .footer-nav-links {
+    margin: auto;
+  }
+
+  .footer-nav-links ul {
+    display: inline-flex;
+  }
+
+  .footer-nav-links ul li {
+    padding: 1em;
+    margin: auto 0;
+  }
+
+  .social-links {
+    margin: 1em 2em 1em auto;
+  }
 }

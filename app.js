@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 const port = 3000;
 
-mongoose.connect('mongodb://localhost/coffee');
+//mongoose.connect('mongodb://localhost/coffee');
+mongoose.connect('mongodb://localhost/coffee', { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 var userSchema = mongoose.Schema({
   name: String,
@@ -22,6 +23,10 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   res.render("index");
+});
+
+app.get('/about-us', (req, res) => {
+  res.render("about-us");
 });
 
 app.get('/login', (req, res) => {
